@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----FONTS----- */
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: ("../fonts/WorkSans-Variable.woff") format("woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+/* -----VARIABLES----- */
+
+$copy: "Work Sans", sans-serif;
+
+$bg-color: #e1e1e1a7;
+$primary-color: #000;
+$link-color: limegreen;
+
+// GENERAL
+ul {
+  list-style-type: none;
+}
+
+h1.logo {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+a:hover {
+  color: $link-color;
+}
+
+body {
+  font-family: $copy;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: $bg-color;
+}
