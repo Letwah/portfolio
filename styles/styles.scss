@@ -16,13 +16,23 @@ html {
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 /* -----VARIABLES----- */
 
-$copy: "Work Sans", sans-serif;
-
-$bg-color: #e1e1e1a7;
-$primary-color: #000;
+$copy-font-fam: "Work Sans", sans-serif;
+$heading-font-fam: "Work Sans", sans-serif;
+$norm-font: 400;
+$bold-font: 700;
+$bg-color: #ebebeb;
+$sec-bg-color: #e0e0db;
+$primary-color: #0e0e0e;
+$secondary-color: #707070;
+$primary-shadow: #707070;
 $link-color: limegreen;
+$bottom-margin: 0.5rem;
+$bottom-margin-alt: 1rem;
+$line-height: 1.7rem;
 
-// GENERAL
+$transition: 0.3s ease;
+
+// GENERAL``
 ul {
   list-style-type: none;
 }
@@ -30,20 +40,6 @@ ul {
 h1.logo {
   text-transform: uppercase;
 }
-
-a {
-  text-decoration: none;
-  color: $primary-color;
-}
-
-a:hover {
-  color: $link-color;
-}
-
-body {
-  font-family: $copy;
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -54,4 +50,70 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: $bg-color;
+}
+
+nav a {
+  text-decoration: none;
+  color: $primary-color;
+  transition: $transition;
+}
+
+nav a:hover {
+  color: $link-color;
+  border-bottom: 2px solid $link-color;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+nav ul li {
+  font-weight: $bold-font;
+}
+
+.burger-menu {
+  color: $primary-color;
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+body {
+  font-family: $copy-font-fam;
+}
+
+// HERO SECTION
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
+.profile-img {
+  height: 30rem;
+  width: auto;
+  box-shadow: 0px 2px 15px 2px $primary-shadow;
+  border-radius: 5px;
+}
+
+.about {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 5px;
+}
+
+.about {
+  h1 {
+    margin-bottom: $bottom-margin;
+  }
+  p {
+    line-height: $line-height;
+    padding: 0.3rem 0;
+  }
 }
